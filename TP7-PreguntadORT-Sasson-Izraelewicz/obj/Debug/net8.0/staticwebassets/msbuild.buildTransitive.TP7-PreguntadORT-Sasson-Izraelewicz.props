@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\TP7-PreguntadORT-Sasson-Izraelewicz.props" />
-</Project>

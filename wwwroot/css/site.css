@@ -1,0 +1,67 @@
+html {
+  font-size: 14px;
+  min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 10px;
+  padding: 10px;
+}
+
+.index h1{
+  text-align: center;
+  color: rgb(47, 145, 136);
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: dotted;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: xx-large;
+}
+
+.index p{
+  text-align: center;
+  color: rgb(34, 104, 97);
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+
+.index img{
+  width: 40%;
+  height: auto;
+  margin-left: 45%;
+}
+
+.index nav{
+  width: 10%;
+  height: auto;
+}
+
+.index nav ul{
+  width: 100%;
+  height: auto;
+}
+
+.index nav ul li{
+  list-style: none;
+  background-color: #59aa8f;
+}
+
+.index nav ul li a{
+  color: #dbdbdb;
+}
+
+
+
+footer {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+}
