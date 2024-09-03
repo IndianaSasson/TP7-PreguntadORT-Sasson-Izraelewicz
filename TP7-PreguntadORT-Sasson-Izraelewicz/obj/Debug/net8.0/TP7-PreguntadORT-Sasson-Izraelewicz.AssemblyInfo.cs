@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP7-PreguntadORT-Sasson-Izraelewicz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2be84b10be264a49f3df3b2b1561998e6bfe95a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64ef0e40646b1082bd48e2d5570384218f84cc60")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP7-PreguntadORT-Sasson-Izraelewicz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP7-PreguntadORT-Sasson-Izraelewicz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
