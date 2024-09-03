@@ -10,15 +10,25 @@ html {
 }
 
 body {
-  margin: 10px;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
+  background-image: url('/path/to/your/background-image.jpg');
+  background-size: cover; /* Ajusta la imagen para cubrir el fondo */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+
+.index {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para mejorar la legibilidad */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .index h1{
   text-align: center;
   color: rgb(47, 145, 136);
   font-weight: bold;
-  font-style: italic;
   text-decoration: dotted;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: xx-large;
@@ -33,13 +43,21 @@ body {
 }
 
 .index img{
-  width: 40%;
+  width: 25%;
   height: auto;
-  margin-left: 45%;
+  margin-left: 38%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.index img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .index nav{
   width: 10%;
+  margin-left: 47%;
   height: auto;
 }
 
@@ -50,14 +68,19 @@ body {
 
 .index nav ul li{
   list-style: none;
+}
+
+.index nav ul li a button{
+  color: #ffffff;
+  width: 50%;
+  height: auto;
   background-color: #59aa8f;
 }
 
-.index nav ul li a{
-  color: #dbdbdb;
+.index nav ul li a button:hover {
+  background-color: #83eeca;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-
-
 
 footer {
   margin-top: 10px;
