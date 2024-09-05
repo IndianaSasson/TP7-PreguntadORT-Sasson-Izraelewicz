@@ -1,0 +1,61 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="site.css" rel="stylesheet">
+
+<div class="ConfigurarJuego">
+    <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-turquoise text-white">
+                            <h4 class="mb-0">Configurar Juego</h4>
+                        </div>
+                        <div class="card-body">
+                            <form action='@Url.Action("Comenzar","Home")' method="get">
+                                <div class="form-group">
+                                    <label for="dificultad">Dificultad</label>
+                                    <div id="dificultad" name="dificultad" class="form-check">
+                                        <input class="form-check-input" type="radio" name="dificultad" id="dificultad-todas" value="-1" checked>
+                                        <label class="form-check-label" for="dificultad-todas">Todas</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="dificultad" id="dificultad-facil" value="1">
+                                        <label class="form-check-label" for="dificultad-facil">Fácil</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="dificultad" id="dificultad-medio" value="2">
+                                        <label class="form-check-label" for="dificultad-medio">Medio</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="dificultad" id="dificultad-dificil" value="3">
+                                        <label class="form-check-label" for="dificultad-dificil">Difícil</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="categoria">Categoría</label>
+                                    <select id="categoria" name="categoria" class="form-control">
+                                        <option value="-1">Todas</option>
+                                        <option value="1">Tipo de Datos</option>
+                                        <option value="2">Listas y Diccionarios</option>
+                                        <option value="3">MVC</option>
+                                        <option value="4">GitHub</option>
+                                        <option value="5">SQL Client y Dapper</option>
+                                        
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="username">Nombre de Usuario</label>
+                                    <input type="text" id="username" name="username" class="form-control" required>
+                                </div>
+                            
+                                  <input type="submit" value="Jugar" class="btn-jugar">
+                               
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

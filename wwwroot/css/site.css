@@ -82,9 +82,108 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-footer {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #f8f9fa;
-  border-top: 1px solid #e9ecef;
+
+.ConfigurarJuego {
+  background: linear-gradient(135deg, #00bcd4, #009688); /* Fondo degradado turquesa */
+  color: #035e4e;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.ConfigurarJuego .card {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+/* Estilo del encabezado de la tarjeta */
+.ConfigurarJuego .card-header {
+  background-color: #009688; /* Color de fondo turquesa oscuro */
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Estilo del cuerpo de la tarjeta */
+.ConfigurarJuego .card-body {
+  padding: 2rem;
+}
+
+/* Estilo del formulario dentro de ConfigurarJuego */
+.ConfigurarJuego form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo de los grupos de formulario */
+.ConfigurarJuego .form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Estilo del campo de entrada de texto */
+.ConfigurarJuego .form-control {
+  border-radius: 10px;
+  border: 2px solid #00bcd4; /* Borde turquesa */
+  padding: 0.75rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  height: 50px;
+}
+
+.ConfigurarJuego .form-control:focus {
+  border-color: #009688; /* Color de borde al enfocar */
+  box-shadow: 0 0 5px rgba(0, 188, 212, 0.5); /* Sombra alrededor al enfocar */
+  outline: none;
+}
+
+/* Estilo de las etiquetas de formulario */
+.ConfigurarJuego label {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Estilo de los radio buttons y las opciones */
+.ConfigurarJuego .form-check-input {
+  margin-right: 0.5rem;
+}
+
+.ConfigurarJuego .form-check-label {
+  font-size: 1rem;
+}
+
+/* Estilo del botón Jugar */
+.ConfigurarJuego input[type="submit"].btn-jugar {
+  background-color: #00bcd4; /* Color turquesa */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1rem;
+}
+
+.ConfigurarJuego input[type="submit"].btn-jugar:hover {
+  background-color: #009688; /* Color turquesa oscuro al pasar el cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ConfigurarJuego input[type="submit"].btn-jugar:active {
+  background-color: #00796b; /* Color turquesa más oscuro al hacer clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ConfigurarJuego input[type="submit"].btn-jugar:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.3); /* Resaltado al enfocarse */
 }
