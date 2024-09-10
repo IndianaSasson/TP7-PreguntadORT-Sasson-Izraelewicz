@@ -3,8 +3,8 @@ using System.Collections.Generic;
 namespace TP7_PreguntadORT_Sasson_Izraelewicz;
 
 public static class Juego{
-    private static string Username {get; set;}
-    private static int PuntajeActual {get; set;}
+    public static string Username {get; set;}
+    public static int PuntajeActual {get; private set;}
     private static int ContadorPreguntaActual {get; set;}
     private static int CantidadPreguntasCorrectas {get; set;}
     private static List<Pregunta> ListaPreguntas {get; set;}
@@ -16,7 +16,7 @@ public static class Juego{
         Username = "";
         PuntajeActual = 0;
         CantidadPreguntasCorrectas = 0;
-        ContadorPreguntaActual = 1;
+        ContadorPreguntaActual = 0;
     }
 
     public static List<Categoria> ObtenerCategorias()
@@ -42,7 +42,7 @@ public static class Juego{
 
     public static Pregunta ObtenerProximaPregunta()
     {
-        return ListaPreguntas[ContadorPreguntaActual + 1];
+        return ListaPreguntas[ContadorPreguntaActual];
     }
 
     public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
@@ -65,14 +65,9 @@ public static class Juego{
         {
             PuntajeActual+= 10;
             CantidadPreguntasCorrectas ++;
-            ContadorPreguntaActual ++;
-            PreguntaActual = ObtenerProximaPregunta();
         }
-        else
-        {
-            ContadorPreguntaActual ++;
-            PreguntaActual = ObtenerProximaPregunta();
-        }
+        PreguntaActual = ObtenerProximaPregunta();
+        ContadorPreguntaActual ++;
 
         return Correcta;
     }

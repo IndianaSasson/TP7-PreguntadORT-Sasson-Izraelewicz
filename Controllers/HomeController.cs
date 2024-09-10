@@ -28,22 +28,24 @@ public class HomeController : Controller
     public IActionResult Comenzar(string username, int dificultad, int categoria)
     {
         Juego.CargarPartida(username, dificultad, categoria);
-        ViewBag.Usuario = username;
+        ViewBag.Usuario = Juego.Username;
         return RedirectToAction("Jugar");
     }
 
     public IActionResult Jugar()
     {
+        ViewBag.UserName = Juego.Username;
+        ViewBag.Puntaje = Juego.PuntajeActual;
         ViewBag.PreguntaActual = Juego.ObtenerProximaPregunta();
-        ViewBag.Respuesta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.idPregunta);
+        ViewBag.Respuestas = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
 
         if(ViewBag.PreguntaActual == null)
         {
             return View ("Fin");
         }
         else{
-            ViewBag.Respuesta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.idPregunta);
-            return View ("Juego");
+            ViewBag.Respuesta = Juego.ObtenerProximasRespuestas(ViewBag.PreguntaActual.IdPregunta);
+            return View ("Jugar");
         }
         
     }

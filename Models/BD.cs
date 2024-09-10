@@ -39,7 +39,7 @@ public static class BD
         if(dificultad != -1 && categoria != -1){
             using(SqlConnection db = new SqlConnection(_connectionString))
             {
-                string sql = "SELECT * FROM Preguntas WHERE (IdDificultad = @pdificultad) AND (IdCategoria = pcategoria)";
+                string sql = "SELECT * FROM Preguntas WHERE (IdDificultad = @pdificultad) AND (IdCategoria = @pcategoria)";
                 listaPreguntas = db.Query<Pregunta>(sql, new {pdificultad = dificultad, pcategoria = categoria}).ToList();
             }
     

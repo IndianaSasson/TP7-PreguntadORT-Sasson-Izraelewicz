@@ -2,5 +2,12 @@
 
 <div class="Jugar">
 
-<p> @ViewBag.Usuario.username</p>
+<p> HOLA @ViewBag.UserName</p>
+<p>Pregunta: @ViewBag.PreguntaActual.Enunciado<p>
+<img src="@ViewBag.PreguntaActual.Foto" />
+@foreach(var item in @ViewBag.Respuestas)
+{
+    <p> @item.Contenido </p>
+}
+
 <div>
