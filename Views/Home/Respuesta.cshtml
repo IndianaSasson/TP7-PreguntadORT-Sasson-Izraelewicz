@@ -1,0 +1,19 @@
+<div class="FondoRespuesta">
+<div class="Respuesta">
+@if(ViewBag.Correcta == true)
+{
+    <div class="Respuesta Correcta">
+        <p>¡Correcta!</p>
+    </div>
+}
+else
+{
+    <div class="Respuesta Incorrecta">
+        <p>¡Incorrecta!</p>
+    </div>
+}
+
+<h1>Puntos Totales: @ViewBag.Puntaje</h1>
+<a href='@Url.Action("Jugar", "Home")' class="btn">Continuar</a>
+</div>
+</div>

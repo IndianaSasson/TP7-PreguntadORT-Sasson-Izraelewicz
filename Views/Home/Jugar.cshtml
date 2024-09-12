@@ -2,12 +2,12 @@
 
 <div class="Jugar">
 
-<p> HOLA @ViewBag.UserName</p>
+<p> Vamos a ver cuánto sabes @ViewBag.UserName</p>
 <p>Pregunta: @ViewBag.PreguntaActual.Enunciado<p>
 <img src="@ViewBag.PreguntaActual.Foto" />
 @foreach(var item in @ViewBag.Respuestas)
 {
-    <p> @item.Contenido </p>
+    <a href= '@Url.Action("VerificarRespuesta", "Home", new {IdRespuesta = item.IdRespuesta})'> @item.Contenido </a>
 }
 
 <div>

@@ -10,76 +10,196 @@ html {
 }
 
 body {
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('/path/to/your/background-image.jpg');
-  background-size: cover; /* Ajusta la imagen para cubrir el fondo */
-  background-position: center; /* Centra la imagen */
-  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+  background-color: #E0F7FA; /* Fondo turquesa suave */
+  color: #004D40; /* Texto turquesa oscuro */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.index {
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para mejorar la legibilidad */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.index h1{
+h1 {
+  font-family: 'Montserrat', sans-serif; /* Nueva tipografía moderna */
+  font-size: 3.5em; /* Tamaño un poco más pequeño pero aún llamativo */
+  color: #00695C;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 4px;
   text-align: center;
-  color: rgb(47, 145, 136);
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animación para entrada épica del título */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Header Styles */
+.header {
+  background-color: #00ACC1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header img {
+  width: 100px;
+  height: auto;
+  animation: logoDrop 1.5s ease-in-out;
+}
+
+@keyframes logoDrop {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.title h1 {
+  font-family: 'Montserrat', sans-serif; /* Actualización de la tipografía */
   font-weight: bold;
-  text-decoration: dotted;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: xx-large;
+  text-transform: uppercase;
+  color: #E0F7FA;
+  letter-spacing: 2px;
 }
 
-.index p{
-  text-align: center;
-  color: rgb(34, 104, 97);
-  font-style: italic;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: medium;
+.nav-links {
+  display: flex;
+  gap: 15px; /* Reducción del espacio entre botones */
 }
 
-.index img{
-  width: 25%;
-  height: auto;
-  margin-left: 38%;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.index img:hover {
-  transform: scale(1.1);
+.nav-links .btn {
+  background-color: #00838F;
+  color: white;
+  border: 2px solid #004D40;
+  padding: 10px 20px; /* Tamaño más pequeño para los botones */
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s ease;
+  font-size: 1.2em; /* Tamaño de texto reducido */
+  border-radius: 25px; /* Botones más compactos */
 }
 
-.index nav{
-  width: 10%;
-  margin-left: 47%;
-  height: auto;
+.nav-links .btn:hover {
+  background-color: #004D40;
+  color: #E0F7FA;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-.index nav ul{
-  width: 100%;
-  height: auto;
+/* Index Section */
+.index {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  margin: 40px auto;
+  animation: contentFade 2s ease-in-out;
 }
 
-.index nav ul li{
+@keyframes contentFade {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.index img {
+  width: 180px;
+  margin-top: 40px;
+  animation: bounceIn 1.5s ease;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.index p {
+  font-size: 2.5em;
+  color: #00796B;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+nav ul {
   list-style: none;
+  padding: 0;
 }
 
-.index nav ul li a button{
-  color: #ffffff;
-  width: 50%;
-  height: auto;
-  background-color: #59aa8f;
+nav ul li {
+  margin-top: 20px;
 }
 
-.index nav ul li a button:hover {
-  background-color: #83eeca;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+nav ul li .btn {
+  background-color: #00ACC1;
+  color: white;
+  border: none;
+  padding: 15px 40px; /* Botones más pequeños */
+  font-size: 1.5em; /* Texto de botón ligeramente más pequeño */
+  border-radius: 30px; /* Borde más compacto */
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li .btn:hover {
+  background-color: #00838F;
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer Styles */
+footer {
+  background-color: #00BCD4;
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 1.3em;
+  margin-top: auto;
+}
+
+footer a {
+  color: #004D40;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #E0F7FA;
 }
 
 
@@ -186,4 +306,326 @@ body {
 .ConfigurarJuego input[type="submit"].btn-jugar:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.3); /* Resaltado al enfocarse */
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/* Card Design for Questions */
+.Jugar {
+  background: linear-gradient(135deg, #00BCD4 0%, #00838F 100%); /* Fondo degradado turquesa */
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Sombra para darle profundidad */
+  text-align: center;
+}
+
+.Jugar p {
+  font-size: 1.8em; /* Texto más grande */
+  color: #FFFFFF; /* Color de texto blanco */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Jugar img {
+  width: 50%;
+  height: auto;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra en la imagen */
+}
+
+/* Styling for the Answer Links */
+.Jugar a {
+  display: block;
+  background-color: #00838F; /* Fondo turquesa para las respuestas */
+  color: white;
+  padding: 15px;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 50px;
+  font-size: 1.4em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra en las respuestas */
+}
+
+.Jugar a:hover {
+  background-color: #004D40; /* Cambia a un turquesa más oscuro al hacer hover */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25); /* Sombra más intensa al hacer hover */
+}
+
+/* Decorative Background */
+.Jugar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,188,212,0.1) 20%, transparent 80%);
+  z-index: -1;
+  opacity: 0.7;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .Jugar {
+      width: 80%;
+  }
+
+  .Jugar p {
+      font-size: 1.4em;
+  }
+
+  .Jugar a {
+      font-size: 1.2em;
+  }
+}
+.FondoRespuesta{
+  width: 100%;
+  height: 1000px;
+  background-color: #0da9b8;
+}
+.Respuesta {
+
+  background: linear-gradient(145deg, #00ACC1 30%, #006064 100%); /* Fondo degradado turquesa oscuro */
+  border-radius: 25px;
+  padding: 50px;
+  text-align: center;
+  color: #FFFFFF;
+  width: 80%;
+  max-width: 1000px;
+  min-height: 200px; /* Asegura que el contenedor sea grande */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* Sombra épica */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center;
+  animation: appear 0.8s ease-in-out;
+  margin: auto; /* Centrado en la pantalla */
+}
+
+/* Animación para la aparición del div */
+@keyframes appear {
+  from {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Cambios dinámicos según la respuesta */
+.Respuesta.Correcta {
+  background: linear-gradient(135deg, #4CAF50, #66BB6A); /* Gradiente verde para correcta */
+  transform: scale(1.05); /* Pequeño zoom */
+}
+
+/* Estilo para respuesta incorrecta */
+.Respuesta.Incorrecta {
+  background: linear-gradient(135deg, #F44336, #EF5350); /* Gradiente rojo para incorrecta */
+  transform: scale(1.05); /* Pequeño zoom */
+}
+
+/* Estilo para las respuestas */
+.Respuesta p {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+}
+
+/* Estilo para los puntos */
+.Respuesta h1 {
+  margin-top: 30px;
+  font-size: 2.5em;
+  color: #00E676; /* Verde brillante */
+  text-shadow: 0 2px 10px rgba(0, 230, 118, 0.6);
+}
+
+/* Botón de continuar */
+.Respuesta a {
+  display: inline-block;
+  background-color: #0097A7; /* Fondo turquesa */
+  color: white;
+  padding: 15px 30px;
+  margin-top: 30px;
+  border-radius: 50px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.4s ease;
+  box-shadow: 0px 8px 20px rgba(0, 151, 167, 0.5);
+}
+
+.Respuesta a:hover {
+  background-color: #00796B; /* Turquesa oscuro al hacer hover */
+  transform: scale(1.1); /* Agrandamiento épico */
+  box-shadow: 0px 10px 25px rgba(0, 121, 107, 0.7);
+}
+
+/* Estilo de fondo dinámico */
+.Respuesta::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  background: radial-gradient( rgba(0,188,212,0.15));
+  z-index: -1;
+  animation: moveBackground 6s infinite linear;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .Respuesta {
+      width: 90%;
+  }
+
+  .Respuesta h1 {
+      font-size: 2em;
+  }
+
+  .Respuesta a {
+      font-size: 1.2em;
+      padding: 10px 20px;
+  }
+}
+
+a.btn {
+  display: inline-block;
+  background-color: #0097A7; /* Botón turquesa oscuro */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 30px;
+  box-shadow: 0px 8px 20px rgba(0, 151, 167, 0.4);
+  transition: all 0.4s ease;
+}
+
+a.btn:hover {
+  background-color: #00796B; /* Color más oscuro al pasar el ratón */
+  transform: translateY(-3px); /* Efecto de elevación */
+  box-shadow: 0px 10px 25px rgba(0, 121, 107, 0.5);
+}
+
+.Fin {
+  text-align: center;
+  background: linear-gradient(135deg, #00ACC1, #00838F); /* Degradado turquesa */
+  padding: 60px;
+  border-radius: 25px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  animation: fadeInScale 1.5s ease-in-out;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Animación de entrada */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Estilo del título */
+.Fin h1 {
+  font-family: 'Montserrat', sans-serif; /* Tipografía elegante */
+  font-size: 5em; /* Tamaño grande */
+  color: #E0F7FA; /* Texto claro */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4); /* Sombra intensa */
+  animation: glowText 2s ease-in-out infinite alternate; /* Brillo */
+}
+
+/* Efecto de brillo en el texto */
+@keyframes glowText {
+  from {
+    text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4), 0 0 15px #00E5FF, 0 0 25px #00E5FF;
+  }
+  to {
+    text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.4), 0 0 30px #00FFFF, 0 0 50px #00FFFF;
+  }
+}
+
+/* Texto descriptivo */
+.Fin p {
+  font-size: 2.5em; /* Tamaño de texto mayor */
+  color: #004D40; /* Turquesa oscuro */
+  font-weight: bold;
+  margin: 15px 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animación para el contenido */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos del botón */
+.Fin .btn {
+  background-color: #004D40; /* Turquesa oscuro */
+  color: #E0F7FA; /* Texto claro */
+  padding: 20px 40px;
+  font-size: 1.5em; /* Botón más grande */
+  border: none;
+  border-radius: 40px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra intensa */
+}
+
+/* Efecto hover del botón */
+.Fin .btn:hover {
+  background-color: #00796B; /* Color más claro al pasar el mouse */
+  transform: translateY(-7px); /* Elevación mayor */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Sombra más intensa */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+  .Fin {
+    padding: 40px;
+  }
+
+  .Fin h1 {
+    font-size: 3.5em; /* Reducción en pantallas pequeñas */
+  }
+
+  .Fin p {
+    font-size: 1.8em;
+  }
+
+  .Fin .btn {
+    padding: 15px 30px;
+    font-size: 1.2em;
+  }
 }

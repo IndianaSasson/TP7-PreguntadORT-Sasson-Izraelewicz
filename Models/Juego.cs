@@ -5,6 +5,7 @@ namespace TP7_PreguntadORT_Sasson_Izraelewicz;
 public static class Juego{
     public static string Username {get; set;}
     public static int PuntajeActual {get; private set;}
+
     private static int ContadorPreguntaActual {get; set;}
     private static int CantidadPreguntasCorrectas {get; set;}
     private static List<Pregunta> ListaPreguntas {get; set;}
@@ -42,7 +43,8 @@ public static class Juego{
 
     public static Pregunta ObtenerProximaPregunta()
     {
-        return ListaPreguntas[ContadorPreguntaActual];
+        if(ContadorPreguntaActual < ListaPreguntas.Count()) return ListaPreguntas[ContadorPreguntaActual];
+         else return null;
     }
 
     public static List<Respuesta> ObtenerProximasRespuestas(int idPregunta)
