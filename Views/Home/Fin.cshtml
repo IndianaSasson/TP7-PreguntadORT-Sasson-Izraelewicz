@@ -1,16 +1,15 @@
 <header class="header">
-        <img src="/img/Logo.png" alt="Logo del juego" />
+        <a href='@Url.Action("Index", "Home")'><img src="/img/Logo.png" alt="Logo del juego" /></a>
         <div class="title">
             <h1>PREGUNTADORT</h1>
         </div>
         <div class="nav-links">
             <a href='@Url.Action("ConfigurarJuego","Home")'><button type="button" class="btn">Jugar</button></a>
-            <a href='@Url.Action("Creditos","Home")'><button type="button" class="btn">Créditos</button></a>
         </div>
     </header>
 
-    <div class="Fin"
-    <h1> Felicidades @ViewBag.UserName </h1>
+    <div class="Fin">
+    <p> Felicidades @ViewBag.UserName </p>
     <p>Terminaste el Juego!</p>
     <p> Tu puntaje fue de: @ViewBag.Puntaje puntos </p>
     <a href='@Url.Action("ConfigurarJuego","Home")'><button type="button" class="btn">Volver a Jugar</button></a>

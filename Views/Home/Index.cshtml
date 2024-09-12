@@ -4,13 +4,12 @@
 
 <body>
 <header class="header">
-        <img src="/img/Logo.png" alt="Logo del juego" />
+        <a href='@Url.Action("Index", "Home")'><img src="/img/Logo.png" alt="Logo del juego" /></a>
         <div class="title">
             <h1>PREGUNTADORT</h1>
         </div>
         <div class="nav-links">
             <a href='@Url.Action("ConfigurarJuego","Home")'><button type="button" class="btn">Jugar</button></a>
-            <a href='@Url.Action("Creditos","Home")'><button type="button" class="btn">Créditos</button></a>
         </div>
     </header>
 
